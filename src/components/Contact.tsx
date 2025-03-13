@@ -1,9 +1,8 @@
-import React from 'react';
 import { MapPin, Phone, Clock, MessageCircle } from 'lucide-react';
 
 export function Contact() {
-  const phoneNumber = "525551234567"; // Format: country code (52) + phone number without spaces or symbols
-  const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre sus servicios.");
+  const phoneNumber = "5217771419006"; // Format: country code (52) + phone number without spaces or symbols
+  const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre sus servicios en el taller.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
 
   return (
@@ -16,24 +15,24 @@ export function Contact() {
               <MapPin className="w-6 h-6 mr-4" />
               <div>
                 <h3 className="font-semibold">Dirección</h3>
-                <p>Av. Principal #123, Ciudad</p>
+                <p>Ignacio Allende No. #, Col. El Estribo, Temixco</p>
               </div>
             </div>
             <div className="flex items-center">
-              <Phone className="w-6 h-6 mr-4" />
+              <a href="tel:7771419006"></a> <Phone className="w-6 h-6 mr-4" />
               <div>
                 <h3 className="font-semibold">Teléfono</h3>
-                <p>+52 (555) 123-4567</p>
+                <p>+52 (777) 141 9006</p>
               </div>
             </div>
             <div className="flex items-center">
               <Clock className="w-6 h-6 mr-4" />
               <div>
                 <h3 className="font-semibold">Horario</h3>
-                <p>Lunes a Sábado: 8:00 AM - 6:00 PM</p>
+                <p>Lunes a Sábado: 8:30 AM - 6:00 PM</p>
               </div>
             </div>
-            <a 
+            <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -42,6 +41,17 @@ export function Contact() {
               <MessageCircle className="w-5 h-5 mr-2" />
               Contactar por WhatsApp
             </a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d236.02486664801245!2d-99.23686604450167!3d18.8249691591445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1741891923417!5m2!1ses-419!2smx" ></iframe>
+
+            <button className='bg-slate-300 hover:bg-slate-400 text-gray-800 text-lg rounded-2xl w-48'>
+              <a
+                href='https://www.google.com/maps/dir/?api=1&destination=18.824944,-99.236884'
+                className='flex items-center p-4 justify-evenly'
+              >
+                <img src="/src/assets/route.png" alt="Ruta" className='h-6 px-2' />
+                <span>Mostrar Ruta</span>
+              </a>
+            </button>
           </div>
           <div className="bg-white rounded-lg p-6">
             <form className="space-y-4">

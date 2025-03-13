@@ -1,4 +1,3 @@
-import React from 'react';
 import { Wrench, CheckCircle, Clock } from 'lucide-react';
 
 export function Features() {
